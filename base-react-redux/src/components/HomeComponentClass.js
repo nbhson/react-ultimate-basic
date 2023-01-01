@@ -1,8 +1,8 @@
 import React from 'react';
-import AddUserComponent from './add-user/AddUser';
-import ListUserComponent from './list-user/ListUser';
+import AddUserFunctionComponent from './add-user/AddUserFunction';
+import ListUserFunctionComponent from './list-user/ListUserFunction';
 
-class HomeComponent extends React.Component {
+class HomeComponentClass extends React.Component {
   state = {
     listUsers: [
       { id: 1, name: 'Sơn Nguyễn', age: 18 },
@@ -37,18 +37,18 @@ class HomeComponent extends React.Component {
         <div className='fragment-a'>
           <div className='row mt-3 mb-3'>
             <div className='col col-md-4'>
-              <AddUserComponent
+              <AddUserFunctionComponent
                 handleAddNewUser={this.handleAddNewUser}
-              ></AddUserComponent>
+              ></AddUserFunctionComponent>
             </div>
             <div className='col col-md-8'>
-              <ListUserComponent
+              <ListUserFunctionComponent
                 name={adminName}
                 age={adminAge}
                 listUsers={this.state.listUsers}
                 handleDeleteUser={this.handleDeleteUser}
               >
-              </ListUserComponent>
+              </ListUserFunctionComponent>
             </div>
           </div>
         </div>
@@ -71,4 +71,4 @@ class HomeComponent extends React.Component {
   }
 }
 
-export default HomeComponent;
+export default HomeComponentClass;

@@ -1,7 +1,6 @@
 import React from 'react';
 
 class NavbarComponent extends React.Component {
-
   render() {
     return (
       <nav className="navbar bg-body-tertiary shadow-sm">

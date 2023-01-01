@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import HomeComponent from './components/HomeComponent';
+import HomeComponentFunction from './components/HomeComponentFunction';
 import NavbarComponent from './components/nav-bar/Navbar';
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
       <React.Fragment>
         <NavbarComponent></NavbarComponent>
         <div className="container">
-          <HomeComponent></HomeComponent>
+          <HomeComponentFunction></HomeComponentFunction>
         </div>
       </React.Fragment>
     );

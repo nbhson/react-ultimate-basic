@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../logo.svg';
 import './AddUser.scss';
 
-class AddUserComponent extends React.Component {
+class AddUserClassComponent extends React.Component {
   state = {
     name: 'Sơn Nguyễn',
     age: 24
@@ -74,4 +74,4 @@ class AddUserComponent extends React.Component {
   }
 }
 
-export default AddUserComponent;
+export default AddUserClassComponent;

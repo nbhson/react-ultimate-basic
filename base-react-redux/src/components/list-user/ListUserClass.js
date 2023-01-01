@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ListUser.scss'
 
-class ListUserComponent extends React.Component {
-  state = {
-    isHideList: true
+// Stateful: quản lí component bằng state
+class ListUserClassComponent extends React.Component {
+  constructor(props) {
+    console.log('Call constructor');
+    super(props);
+    this.state = {
+      isHideList: true
+    }
   }
 
   handleHideList = () => {
@@ -17,6 +22,7 @@ class ListUserComponent extends React.Component {
   }
 
   render() {
+    console.log('Call render');
     //typeof this.props = object
     const { name, age, listUsers } = this.props;
     return (
@@ -65,6 +71,20 @@ class ListUserComponent extends React.Component {
       </div>
     )
   }
+
+  // Chạy sau render - Thường gọi API và select DOM
+  componentDidMount() {
+    console.log('Call did mount');
+    setTimeout(() => {
+      document.title = 'React Lifecycle';
+    }, 3000);
+  }
+
+  // Chạy sau render - Khi state thay đổi/ new props/force update
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log('Call did update', prevProps, prevState, snapshot);
+  }
 }
 
-export default ListUserComponent;
+
+export default ListUserClassComponent;
